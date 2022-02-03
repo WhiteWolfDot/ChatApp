@@ -1,15 +1,18 @@
 const chatCont = document.querySelector('#conv-cont');
 const chatForm = document.querySelector('.chat-form');
 const chatInput = document.querySelector('.chat-input');
-
+//
 chatForm.addEventListener("submit", event => {
   event.preventDefault();
-
   const msgText = chatInput.value;
   if (!msgText) return;
-
-  appendMessage(msgText);
-  chatInput.value = "";
+  if (msgText.trim()) {
+    appendMessage(msgText);
+    chatInput.value = "";
+  }
+  else {
+    chatInput.value = "";
+  }
 });
 function appendMessage(text) {
 
