@@ -31,5 +31,5 @@ function appendMessage(text) {
   </div>
     `;
   chatCont.insertAdjacentHTML('beforeend', msgHTML);
-  chatCont.scrollTop += 100;
+  chatCont.scrollTop += 98;
 }
